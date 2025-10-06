@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ZipOnGo — Fast ZIP/RAR/7z for iPhone & iPad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZipOnGo is the fast, secure ZIP/RAR/7z utility for iPhone and iPad. Create, unzip, encrypt, and share archives with ease.">
+  <meta property="og:title" content="ZipOnGo">
+  <meta property="og:description" content="Fast ZIP/RAR/7z utility for iPhone & iPad.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --accent:#e11d48; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
+    .hero{display:grid;gap:14px;padding:42px 0}
+    .title{font-size:40px;line-height:1.1;margin:0}
+    .subtitle{color:var(--muted);max-width:780px}
+    .cta{display:flex;gap:12px;margin-top:10px}
+    .btn{background:var(--accent);color:white;padding:12px 16px;border-radius:12px;border:0;font-weight:600}
+    .btn.secondary{background:#1f2937}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:28px}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:16px;padding:16px}
+    h3{margin:8px 0 6px}
+    footer{border-top:1px solid #1f2937;margin-top:40px;padding-top:16px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <strong>ZipOnGo</strong>
+      <nav>
+        <a href="#features">Features</a> ·
+        <a href="./zipongo-support.html">Support</a> ·
+        <a href="./zipongo-privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1 class="title">Fast, secure ZIP/RAR/7z on iPhone & iPad</h1>
+      <p class="subtitle">Create and unzip archives, add AES-256 passwords, share anywhere. Designed for power users and teams.</p>
+      <div class="cta">
+        <a class="btn" href="#">Download on the App Store</a>
+        <a class="btn secondary" href="#features">See features</a>
+      </div>
+    </section>
+
+    <section id="features" class="cards">
+      <div class="card">
+        <h3>Unzip anything</h3>
+        <p>ZIP, RAR, 7z, ZIPX and more. Large files supported.</p>
+      </div>
+      <div class="card">
+        <h3>Secure by default</h3>
+        <p>Create password-protected ZIPs with AES-256.</p>
+      </div>
+      <div class="card">
+        <h3>Zip & Share</h3>
+        <p>Save to Files or share via Mail, Messages, Drive, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Pro workflows</h3>
+        <p>Batch select, progress indicators, and failure-safe operations.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> ZipOnGo by HASHNI INC ·
+      <a href="./zipongo-support.html">Support</a> ·
+      <a href="./zipongo-privacy.html">Privacy</a>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
