@@ -1,49 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Privacy Policy — ZipOnGo (iOS)</title>
-  <meta name="description" content="Privacy Policy for ZipOnGo (iOS) by Hashni Inc." />
+  <meta name="description" content="Privacy Policy for ZipOnGo (iOS) by Hashni Inc."/>
   <style>
     :root{
       --bg:#ffffff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --badge:#f1f5f9;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0f1a; --fg:#e6e9ef; --muted:#c2c8d0; --link:#7cc7ff; --card:#0f1422; --border:#1f2637; --badge:#121a2c; }
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     .container{max-width:920px;margin:auto;padding:32px 20px}
     h1{font-size:2rem;margin:.2rem 0 1rem}
-    h2{font-size:1.35rem;margin:2rem 0 0.75rem}
+    h2{font-size:1.35rem;margin:2rem 0 .75rem}
     h3{font-size:1.05rem;margin:1.25rem 0 .5rem}
     p,li{color:var(--muted)}
     .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;margin:14px 0}
     .meta{display:flex;gap:16px;flex-wrap:wrap;margin:.5rem 0 1.25rem}
-    .badge{background:var(--badge);border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:.85rem;color:#334155}
+    .badge{background:var(--badge);border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:.9rem;color:var(--muted)}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     .toc ol{margin:.2rem 0 .2rem 1.2rem}
-    .small{font-size:.93rem}
+    .small{font-size:.95rem}
     footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
-    code{background:#0f172a0d;padding:.1rem .35rem;border-radius:6px}
+    code{background:#0f172a14;padding:.1rem .35rem;border-radius:6px}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body>
   <main class="container">
     <header>
       <h1>Privacy Policy — ZipOnGo (iOS)</h1>
-      <div class="meta">
-        <span class="badge">Owner: Hashni Inc</span>
-        <span class="badge">App: ZipOnGo (iOS)</span>
-        <span class="badge">Effective date: October 6, 2025</span>
+      <div class="meta" role="list" aria-label="Document metadata">
+        <span class="badge" role="listitem">Owner: Hashni Inc</span>
+        <span class="badge" role="listitem">App: ZipOnGo (iOS)</span>
+        <span class="badge" role="listitem">Effective date: October 6, 2025</span>
       </div>
       <div class="card small">
         ZipOnGo helps you create, open, and share compressed archives (ZIP/RAR/7z, etc.). We collect only what we need to run the app, fulfill purchases, improve reliability, and—if you allow—show ads. We do not sell your personal data.
       </div>
     </header>
 
-    <section class="toc card">
-      <h3>Contents</h3>
+    <section class="toc card" aria-labelledby="toc-heading">
+      <h3 id="toc-heading">Contents</h3>
       <ol>
         <li><a href="#what-we-collect">What we collect and why</a></li>
+        <li><a href="#not-collect">What we do not collect</a></li>
+        <li><a href="#cloud">Cloud connections</a></li>
         <li><a href="#app-privacy">App Store “App Privacy” categories</a></li>
         <li><a href="#att">Apple App Tracking Transparency (ATT)</a></li>
         <li><a href="#processors">Third-party processors (SDKs)</a></li>
@@ -61,115 +67,120 @@
 
     <section id="what-we-collect">
       <h2>1) What we collect and why</h2>
-
       <h3>A. From Apple (to fulfill purchases)</h3>
-      <p><strong>Purchase &amp; subscription info (StoreKit)</strong>: product IDs, transaction status/receipts, region, and dates.</p>
-      <p><em>Purpose:</em> App functionality (deliver purchases, restore entitlements, customer support), fraud prevention, and accounting.</p>
+      <p><strong>Purchase &amp; subscription info (StoreKit)</strong>: product IDs, transaction receipts/status, region, dates.</p>
+      <p><em>Purpose:</em> deliver purchases, restore entitlements, fraud prevention, and accounting.</p>
 
       <h3>B. From your device (app operation)</h3>
       <ul>
-        <li><strong>Diagnostics &amp; crash data</strong> (Firebase Crashlytics): crash reports, stack traces, device model, OS version, app version, timestamps. <em>Purpose:</em> reliability, debugging, safety, and quality.</li>
-        <li><strong>App usage &amp; performance</strong> (Firebase Analytics): screens opened, feature usage counts, session metrics. <em>Purpose:</em> aggregate analytics to improve features and UX.</li>
+        <li><strong>Diagnostics &amp; crash data</strong> (e.g., Firebase Crashlytics): crash logs, stack traces, device/OS/app version, timestamps. <em>Purpose:</em> reliability, debugging, quality.</li>
+        <li><strong>Usage &amp; performance</strong> (e.g., Firebase Analytics): screen views and feature counts in aggregate. <em>Purpose:</em> improve features and UX.</li>
       </ul>
-      <p><strong>We do not collect</strong> precise GPS location, contacts, photos, microphone input, or the contents of your documents. Your files are processed <strong>on device</strong> unless you explicitly share or export them.</p>
 
       <h3>C. For advertising (only if you consent to tracking)</h3>
-      <p><strong>Ad identifiers and events</strong>: Apple’s IDFA (if allowed) and ad interaction/impression data via Google Mobile Ads (AdMob).</p>
-      <p><em>Purpose:</em> deliver and measure ads; prevent fraud. See <a href="#att">ATT &amp; Tracking</a>.</p>
+      <p><strong>Ad identifiers/events</strong>: Apple’s IDFA (if allowed) and ad interactions via Google AdMob. <em>Purpose:</em> deliver/measure ads; prevent fraud. See <a href="#att">ATT</a>.</p>
+    </section>
+
+    <section id="not-collect">
+      <h2>2) What we do not collect</h2>
+      <p>We do not collect precise GPS location, contacts, microphone input, photo contents, or the contents of your files. File operations occur <strong>on device</strong> or within your chosen cloud provider; nothing is uploaded to our servers unless you explicitly share/export it.</p>
+    </section>
+
+    <section id="cloud">
+      <h2>3) Cloud connections</h2>
+      <p>You may connect third-party cloud services (Dropbox, Google Drive, Box, OneDrive). Authentication and file access are handled securely by each provider’s SDK. <strong>Hashni Inc does not receive your cloud credentials or files.</strong> Your use of those services is governed by their own terms and privacy policies.</p>
     </section>
 
     <section id="app-privacy">
-      <h2>2) App Store “App Privacy” categories</h2>
+      <h2>4) App Store “App Privacy” categories</h2>
       <ul>
-        <li><strong>Identifiers</strong>: IDFA (if you allow), limited device identifiers (for diagnostics/anti-abuse).</li>
-        <li><strong>Purchases</strong>: in-app purchase / subscription metadata (no payment card data).</li>
+        <li><strong>Identifiers</strong>: IDFA (if allowed) and limited device identifiers.</li>
+        <li><strong>Purchases</strong>: in-app purchase/subscription metadata.</li>
         <li><strong>Usage Data</strong>: app interactions and performance metrics.</li>
         <li><strong>Diagnostics</strong>: crash logs and stability signals.</li>
       </ul>
-      <p><strong>Linking:</strong> Purchases and diagnostics can be linked to your device/app instance to provide functionality and safety.</p>
-      <p><strong>Tracking:</strong> Only advertising identifiers are used for tracking if you tap <em>Allow</em> on the ATT prompt.</p>
+      <p><strong>Linking:</strong> Purchases and diagnostics may be linked to your device/app instance to provide functionality and safety.</p>
+      <p><strong>Tracking:</strong> Only ad identifiers are used for tracking and only if you tap <em>Allow</em> on the ATT prompt.</p>
     </section>
 
     <section id="att">
-      <h2>3) Apple App Tracking Transparency (ATT)</h2>
-      <p>ZipOnGo asks for permission <strong>before</strong> using data to track you across other companies’ apps and websites. If you decline, you will still see ads, but they may be less relevant. You can change permission anytime in <em>iOS Settings → Privacy &amp; Security → Tracking</em>.</p>
+      <h2>5) Apple App Tracking Transparency (ATT)</h2>
+      <p>ZipOnGo asks for permission <strong>before</strong> using data to track you across apps and websites owned by other companies. If you decline, you may still see ads, but they may be less relevant. Change permission anytime in <em>iOS Settings → Privacy &amp; Security → Tracking</em>.</p>
     </section>
 
     <section id="processors">
-      <h2>4) Third-party processors (SDKs)</h2>
+      <h2>6) Third-party processors (SDKs)</h2>
       <div class="card">
         <p>We use trusted processors acting on our behalf under data-processing agreements:</p>
         <ul>
-          <li><strong>Google Mobile Ads (AdMob)</strong> — ad delivery, measurement, and fraud prevention. <em>Data:</em> identifiers (IDFA if allowed), coarse device info, ad events.</li>
-          <li><strong>Firebase Crashlytics</strong> — crash reports and diagnostics.</li>
-          <li><strong>Firebase Analytics</strong> — aggregate usage analytics; no precise location or contacts.</li>
+          <li><strong>Google Mobile Ads (AdMob)</strong> — ad delivery/measurement and fraud prevention. <em>Data:</em> identifiers (IDFA if allowed), coarse device info, ad events. <a href="https://policies.google.com/technologies/ads">Policy</a></li>
+          <li><strong>Firebase Crashlytics</strong> — crash reports and diagnostics. <a href="https://firebase.google.com/support/privacy">Policy</a></li>
+          <li><strong>Firebase Analytics</strong> — aggregate usage analytics. <a href="https://firebase.google.com/support/privacy">Policy</a></li>
         </ul>
-        <p>Each provider processes data under its own policy and retention. We configure them to the <strong>minimum necessary</strong> for the stated purposes.</p>
+        <p>We configure these services to the <strong>minimum necessary</strong> for the purposes described above.</p>
       </div>
     </section>
 
     <section id="children">
-      <h2>5) Children</h2>
-      <p>ZipOnGo is <strong>not directed to children under 13</strong>. We do not knowingly collect data from children. If you believe a child used the app and provided data, contact us to delete it.</p>
+      <h2>7) Children</h2>
+      <p>ZipOnGo is not directed to children under 13. We do not knowingly collect data from children.</p>
     </section>
 
     <section id="retention">
-      <h2>6) Data retention</h2>
+      <h2>8) Data retention</h2>
       <ul>
-        <li><strong>Crash &amp; diagnostics:</strong> up to <strong>24 months</strong> (provider defaults) or until we complete a verified deletion request.</li>
-        <li><strong>Purchase records:</strong> retained as required by law and accounting (typically up to <strong>7 years</strong>).</li>
+        <li><strong>Crash/diagnostics:</strong> up to 24 months (provider defaults) or until deletion upon verified request.</li>
+        <li><strong>Purchase records:</strong> retained as required by law/accounting (typically up to 7 years).</li>
         <li><strong>Advertising data:</strong> per AdMob’s standard retention schedules.</li>
       </ul>
-      <p>We keep data only as long as necessary for the purposes described in this Policy.</p>
     </section>
 
     <section id="security">
-      <h2>7) Security</h2>
-      <p>We use industry-standard safeguards (encryption in transit, access controls). No method is 100% secure, but we continuously improve our protections.</p>
+      <h2>9) Security</h2>
+      <p>We use industry-standard safeguards (encryption in transit, access controls). No method is 100% secure, but we continuously improve protections.</p>
     </section>
 
     <section id="rights">
-      <h2>8) Your choices &amp; legal rights</h2>
+      <h2>10) Your choices &amp; legal rights</h2>
       <h3>In-app / device controls</h3>
       <ul>
         <li><strong>Tracking (ATT):</strong> allow/deny in iOS Settings.</li>
         <li><strong>Reset IDFA:</strong> iOS Settings → Privacy &amp; Security → Tracking → Reset Advertising Identifier.</li>
-        <li><strong>Crash/analytics at OS level:</strong> you can disable device analytics sharing in iOS Settings.</li>
+        <li><strong>iOS Analytics:</strong> you can disable device analytics sharing in iOS Settings.</li>
       </ul>
-      <h3>EEA/UK, California, and similar jurisdictions</h3>
-      <p>Depending on your region, you may have rights to <strong>access, correct, delete, port, restrict, or object</strong> to processing, and to opt-out of “sharing” for cross-context behavioral advertising (California).</p>
-      <p><em>To exercise rights:</em> email us at <a href="mailto:hashni.work@gmail.com">hashni.work@gmail.com</a>. We will verify your request and respond within applicable timeframes.</p>
+      <h3>Regional rights (EEA/UK, California, etc.)</h3>
+      <p>Depending on your region, you may have rights to access, correct, delete, port, restrict, or object to processing, and to opt-out of “sharing” for cross-context behavioral advertising.</p>
+      <p><em>To exercise rights:</em> email <a href="mailto:hashni.work@gmail.com">hashni.work@gmail.com</a>. We will verify and respond within applicable timeframes.</p>
     </section>
 
     <section id="transfers">
-      <h2>9) International transfers</h2>
+      <h2>11) International transfers</h2>
       <p>If data is transferred outside your region, we use lawful mechanisms (e.g., Standard Contractual Clauses) and appropriate safeguards.</p>
     </section>
 
     <section id="sharing">
-      <h2>10) No sale, limited sharing</h2>
-      <p>We <strong>do not sell</strong> personal data. We share data only with processors listed above, service providers under contract, when required by law, or during a business transfer (merger/acquisition) with equivalent protections.</p>
+      <h2>12) No sale, limited sharing</h2>
+      <p>We do not sell personal data. We share data only with processors listed above, service providers under contract, when required by law, or during a business transfer with equivalent protections.</p>
     </section>
 
     <section id="changes">
-      <h2>11) Changes</h2>
+      <h2>13) Changes</h2>
       <p>We may update this Policy. We will update the “Effective date” and, where required, provide notice in the app or by other means.</p>
     </section>
 
     <section id="contact">
-      <h2>12) Contact</h2>
+      <h2>14) Contact</h2>
       <address class="card">
-        <p><strong>Hashni Inc</strong><br>
-        Email: <a href="mailto:hashni.work@gmail.com">hashni.work@gmail.com</a><br>
-        Support URL: <a href="mailto:hashni.work@gmail.com">mailto:hashni.work@gmail.com</a></p>
-        <!-- If you later publish a support page, replace the Support URL anchor above with your actual https://… link. -->
+        <p><strong>Hashni Inc</strong><br/>
+        Email: <a href="mailto:hashni.work@gmail.com">hashni.work@gmail.com</a><br/>
+        Support: <a href="mailto:hashni.work@gmail.com">hashni.work@gmail.com</a></p>
       </address>
     </section>
 
     <section id="ca-notice">
       <h2>California “Notice at Collection”</h2>
-      <p>We collect the following categories: <strong>Identifiers (IDFA)</strong>, <strong>Purchases</strong>, <strong>Usage</strong>, <strong>Diagnostics</strong>.</p>
-      <p><strong>Purposes:</strong> app functionality, fraud prevention, analytics, and advertising (only if you allow tracking). <strong>Retention:</strong> see <a href="#retention">Data retention</a>. You can opt-out of cross-context behavioral advertising by denying tracking permission (see <a href="#att">ATT</a>).</p>
+      <p>We collect: <strong>Identifiers (IDFA)</strong>, <strong>Purchases</strong>, <strong>Usage</strong>, <strong>Diagnostics</strong>.</p>
+      <p><strong>Purposes:</strong> app functionality, fraud prevention, analytics, advertising (only if you allow tracking). <strong>Retention:</strong> see “Data retention.” Opt-out of cross-context behavioral advertising by denying tracking permission (see <a href="#att">ATT</a>).</p>
     </section>
 
     <footer>
